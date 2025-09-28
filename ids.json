@@ -1,0 +1,11 @@
+{
+  "peripheral.deepresonance:pedestal": 9,
+  "peripheral.energyCell": 0,
+  "computer": 4,
+  "peripheral.industrialAlarm": 1,
+  "peripheral.sophisticatedstorage:barrel": 1,
+  "peripheral.basicSmeltingFactory": 0,
+  "peripheral.computer": 4,
+  "peripheral.deepresonance:generator_part": 2,
+  "peripheral.sophisticatedstorage:limited_barrel": 1
+}

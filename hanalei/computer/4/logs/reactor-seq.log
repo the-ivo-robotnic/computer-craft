@@ -1,0 +1,72 @@
+[Sun Sep 28 13:28:26 2025][DEBUG]: Found 1 reactors!
+[Sun Sep 28 13:28:26 2025][WARN]: Implicitly selecting reactor deepresonance:generator_part_1 as the primary controllee.
+[Sun Sep 28 13:28:26 2025][DEBUG]: Found 8 pedestals!
+[Sun Sep 28 13:28:26 2025][DEBUG]: Found 1 barrels!
+[Sun Sep 28 13:28:26 2025][WARN]: Auto-selecting energyCell_0 as the default battery bank for reactor: deepresonance:generator_part_1!
+[Sun Sep 28 13:28:26 2025][DEBUG]: Pushing 4 RC's to deepresonance:pedestal_3
+[Sun Sep 28 13:28:26 2025][INFO]: Registered SCRAM handler. Waiting for signals controller to initialize...
+[Sun Sep 28 13:28:26 2025][INFO]: Signals controller initialized! Listening for RS SCRAM events...
+[Sun Sep 28 13:28:26 2025][DEBUG]: Pushing 4 RC's to deepresonance:pedestal_4
+[Sun Sep 28 13:28:26 2025][DEBUG]: Pushing 4 RC's to deepresonance:pedestal_2
+[Sun Sep 28 13:28:26 2025][DEBUG]: Pushing 4 RC's to deepresonance:pedestal_9
+[Sun Sep 28 13:28:26 2025][DEBUG]: Pushing 4 RC's to deepresonance:pedestal_7
+[Sun Sep 28 13:28:26 2025][DEBUG]: Pushing 4 RC's to deepresonance:pedestal_8
+[Sun Sep 28 13:28:26 2025][DEBUG]: Pushing 4 RC's to deepresonance:pedestal_5
+[Sun Sep 28 13:28:26 2025][DEBUG]: Pushing 4 RC's to deepresonance:pedestal_6
+[Sun Sep 28 13:28:31 2025][INFO]: RC refil to pedestals complete!
+[Sun Sep 28 13:28:31 2025][INFO]: Control signal established succesfully!
+[Sun Sep 28 13:28:47 2025][INFO]: Reactor startup completed succesfully!
+[Sun Sep 28 13:30:13 2025][DEBUG]: Found 1 reactors!
+[Sun Sep 28 13:30:13 2025][WARN]: Implicitly selecting reactor deepresonance:generator_part_1 as the primary controllee.
+[Sun Sep 28 13:30:13 2025][DEBUG]: Found 8 pedestals!
+[Sun Sep 28 13:30:13 2025][DEBUG]: Found 1 barrels!
+[Sun Sep 28 13:30:13 2025][WARN]: Auto-selecting energyCell_0 as the default battery bank for reactor: deepresonance:generator_part_1!
+[Sun Sep 28 13:30:13 2025][DEBUG]: Pushing 4 RC's to deepresonance:pedestal_3
+[Sun Sep 28 13:30:13 2025][INFO]: Registered SCRAM handler. Waiting for signals controller to initialize...
+[Sun Sep 28 13:30:13 2025][INFO]: Signals controller initialized! Listening for RS SCRAM events...
+[Sun Sep 28 13:30:13 2025][DEBUG]: Pushing 4 RC's to deepresonance:pedestal_4
+[Sun Sep 28 13:30:13 2025][DEBUG]: Pushing 4 RC's to deepresonance:pedestal_2
+[Sun Sep 28 13:30:13 2025][DEBUG]: Pushing 4 RC's to deepresonance:pedestal_9
+[Sun Sep 28 13:30:13 2025][DEBUG]: Pushing 4 RC's to deepresonance:pedestal_7
+[Sun Sep 28 13:30:13 2025][DEBUG]: Pushing 4 RC's to deepresonance:pedestal_8
+[Sun Sep 28 13:30:13 2025][DEBUG]: Pushing 4 RC's to deepresonance:pedestal_5
+[Sun Sep 28 13:30:13 2025][DEBUG]: Pushing 4 RC's to deepresonance:pedestal_6
+[Sun Sep 28 13:30:18 2025][INFO]: RC refil to pedestals complete!
+[Sun Sep 28 13:30:18 2025][INFO]: Control signal established succesfully!
+[Sun Sep 28 13:30:33 2025][INFO]: Reactor startup completed succesfully!
+[Sun Sep 28 13:32:46 2025][DEBUG]: Found 1 reactors!
+[Sun Sep 28 13:32:46 2025][WARN]: Implicitly selecting reactor deepresonance:generator_part_1 as the primary controllee.
+[Sun Sep 28 13:32:46 2025][DEBUG]: Found 8 pedestals!
+[Sun Sep 28 13:32:46 2025][DEBUG]: Found 1 barrels!
+[Sun Sep 28 13:32:46 2025][WARN]: Auto-selecting energyCell_0 as the default battery bank for reactor: deepresonance:generator_part_1!
+[Sun Sep 28 13:32:46 2025][DEBUG]: Pushing 4 RC's to deepresonance:pedestal_3
+[Sun Sep 28 13:32:46 2025][INFO]: Registered SCRAM handler. Waiting for signals controller to initialize...
+[Sun Sep 28 13:32:46 2025][INFO]: Signals controller initialized! Listening for RS SCRAM events...
+[Sun Sep 28 13:32:46 2025][DEBUG]: Pushing 4 RC's to deepresonance:pedestal_4
+[Sun Sep 28 13:32:46 2025][DEBUG]: Pushing 4 RC's to deepresonance:pedestal_2
+[Sun Sep 28 13:32:46 2025][DEBUG]: Pushing 4 RC's to deepresonance:pedestal_9
+[Sun Sep 28 13:32:46 2025][DEBUG]: Pushing 4 RC's to deepresonance:pedestal_7
+[Sun Sep 28 13:32:46 2025][DEBUG]: Pushing 4 RC's to deepresonance:pedestal_8
+[Sun Sep 28 13:32:46 2025][DEBUG]: Pushing 4 RC's to deepresonance:pedestal_5
+[Sun Sep 28 13:32:46 2025][DEBUG]: Pushing 4 RC's to deepresonance:pedestal_6
+[Sun Sep 28 13:32:51 2025][INFO]: RC refil to pedestals complete!
+[Sun Sep 28 13:32:51 2025][INFO]: Control signal established succesfully!
+[Sun Sep 28 13:32:58 2025][CRITICAL]: SCRAM was triggered! Stopping early!
+[Sun Sep 28 13:33:24 2025][DEBUG]: Found 1 reactors!
+[Sun Sep 28 13:33:24 2025][WARN]: Implicitly selecting reactor deepresonance:generator_part_1 as the primary controllee.
+[Sun Sep 28 13:33:24 2025][DEBUG]: Found 8 pedestals!
+[Sun Sep 28 13:33:24 2025][DEBUG]: Found 1 barrels!
+[Sun Sep 28 13:33:24 2025][WARN]: Auto-selecting energyCell_0 as the default battery bank for reactor: deepresonance:generator_part_1!
+[Sun Sep 28 13:33:24 2025][DEBUG]: Pushing 4 RC's to deepresonance:pedestal_3
+[Sun Sep 28 13:33:24 2025][INFO]: Registered SCRAM handler. Waiting for signals controller to initialize...
+[Sun Sep 28 13:33:24 2025][INFO]: Signals controller initialized! Listening for RS SCRAM events...
+[Sun Sep 28 13:33:24 2025][DEBUG]: Pushing 4 RC's to deepresonance:pedestal_4
+[Sun Sep 28 13:33:24 2025][DEBUG]: Pushing 4 RC's to deepresonance:pedestal_2
+[Sun Sep 28 13:33:24 2025][DEBUG]: Pushing 4 RC's to deepresonance:pedestal_9
+[Sun Sep 28 13:33:24 2025][DEBUG]: Pushing 4 RC's to deepresonance:pedestal_7
+[Sun Sep 28 13:33:24 2025][DEBUG]: Pushing 4 RC's to deepresonance:pedestal_8
+[Sun Sep 28 13:33:24 2025][DEBUG]: Pushing 4 RC's to deepresonance:pedestal_5
+[Sun Sep 28 13:33:24 2025][DEBUG]: Pushing 4 RC's to deepresonance:pedestal_6
+[Sun Sep 28 13:33:29 2025][INFO]: RC refil to pedestals complete!
+[Sun Sep 28 13:33:29 2025][INFO]: Control signal established succesfully!
+[Sun Sep 28 13:33:44 2025][INFO]: Reactor startup completed succesfully!
