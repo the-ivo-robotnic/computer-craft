@@ -139,7 +139,7 @@ local function repl_control_loop()
 end
 
 local function main()
-    parallel.waitForAny(repl_control_loop, scram_handler)
+    parallel.waitForAny(repl_control_loop, scram_handler, terminate_handler)
 end
 
 return { main = main }
