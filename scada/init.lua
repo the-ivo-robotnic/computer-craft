@@ -1,4 +1,4 @@
-local civil_alarms = require("/civil-alarms");
+local civil_alarms = require("usr.programs.civil-alarms");
 
 local function clear_term()
     term.clear();

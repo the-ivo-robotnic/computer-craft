@@ -11,5 +11,6 @@ end
 
 add_route("/usr/programs");
 setup_term();
-local scada = require("usr.programs.scada");
-print(scada);
+
+shell.openTab("ui-demo");
+shell.run("turbine-monitor");
