@@ -1,6 +1,7 @@
 LABEL_WIDTH = 15;
 LABEL_HEIGHT = 3;
 DATA_PATH = "./turbine-data.json";
+CMD_PATH = "./fission-reactor-cmd.json";
 
 local pixelui = require("pixelui");
 
@@ -11,6 +12,13 @@ function read_data(data_path)
     local file = fs.open(data_path, "r");
     local data_json = file.readAll();
     return textutils.unserialiseJSON(data_json);
+end
+
+function write_cmd(cmd_path, cmds)
+    local file = fs.open(cmd_path, "w+");
+    local data_json = textutils.serialiseJSON(cmds);
+    file.write(data_json);
+    file.close();
 end
 
 local monitor_width, monitor_height = monitor.getSize();
@@ -91,6 +99,29 @@ local energy_history_chart = app:createChart({
     axisColor = colors.white,
 });
 app.root:addChild(energy_history_chart);
+
+local toggle_label = app:createLabel({
+    x = 2,
+    y = 11,
+    width = LABEL_WIDTH,
+    height = LABEL_HEIGHT,
+    text = "Reactor Switch",
+    align = "right",
+    verticalAlign = "center",
+});
+root:addChild(toggle_label);
+
+local toggle = app:createToggle({
+    x = toggle_label.x + LABEL_WIDTH + 2,
+    y = toggle_label.y,
+    width = LABEL_WIDTH,
+    height = LABEL_HEIGHT,
+    value = true,
+    onChange = function(self, state)
+        write_cmd(CMD_PATH, { state and "REACTOR_ENABLE" or "REACTOR_DISABLE" });
+    end
+})
+app.root:addChild(toggle)
 
 app:spawnThread(function(ctx)
     while not ctx:isCancelled() do

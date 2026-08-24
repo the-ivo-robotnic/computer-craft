@@ -13,4 +13,5 @@ add_route("/usr/programs");
 setup_term();
 
 shell.openTab("ui-demo");
+shell.openTab("reactor-monitor");
 shell.run("turbine-monitor");
