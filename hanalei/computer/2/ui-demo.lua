@@ -100,20 +100,20 @@ local energy_history_chart = app:createChart({
 });
 app.root:addChild(energy_history_chart);
 
-local toggle_label = app:createLabel({
+local reactor_toggle_label = app:createLabel({
     x = 2,
     y = 11,
     width = LABEL_WIDTH,
     height = LABEL_HEIGHT,
-    text = "Reactor Switch",
+    text = "Reactor Switch:",
     align = "right",
     verticalAlign = "center",
 });
-root:addChild(toggle_label);
+root:addChild(reactor_toggle_label);
 
-local toggle = app:createToggle({
-    x = toggle_label.x + LABEL_WIDTH + 2,
-    y = toggle_label.y,
+local reactor_toggle = app:createToggle({
+    x = reactor_toggle_label.x + LABEL_WIDTH + 2,
+    y = reactor_toggle_label.y,
     width = LABEL_WIDTH,
     height = LABEL_HEIGHT,
     value = true,
@@ -121,7 +121,31 @@ local toggle = app:createToggle({
         write_cmd(CMD_PATH, { state and "REACTOR_ENABLE" or "REACTOR_DISABLE" });
     end
 })
-app.root:addChild(toggle)
+app.root:addChild(reactor_toggle)
+
+
+local coolant_toggle_label = app:createLabel({
+    x = 2,
+    y = 14,
+    width = LABEL_WIDTH,
+    height = LABEL_HEIGHT,
+    text = "Reactor Coolant Switch:",
+    align = "right",
+    verticalAlign = "center",
+});
+root:addChild(coolant_toggle_label);
+local coolant_toggle = app:createToggle({
+    x = coolant_toggle_label.x + LABEL_WIDTH + 2,
+    y = coolant_toggle_label.y,
+    width = LABEL_WIDTH,
+    height = LABEL_HEIGHT,
+    value = false,
+    onChange = function(self, state)
+        write_cmd(CMD_PATH, { state and "COOLANT_ENABLE" or "COOLANT_DISABLE" });
+    end
+})
+app.root:addChild(coolant_toggle)
+
 
 app:spawnThread(function(ctx)
     while not ctx:isCancelled() do

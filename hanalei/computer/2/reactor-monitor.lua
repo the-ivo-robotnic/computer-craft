@@ -20,6 +20,8 @@ end
 
 function main()
     local reactor = peripheral.find("fissionReactorLogicAdapter");
+    local coolant_valve_relay = peripheral.find("redstone_relay");
+    local coolant_valve = "top";
 
     while true do
         local cmds = read_cmd(CMD_PATH);
@@ -36,6 +38,10 @@ function main()
                 logger:info("Disarming fission reactor...");
                 reactor.scram();
                 logger:warn("Fission reactor is disarmed!")
+            elseif cmd == "COOLANT_ENABLE" then
+                coolant_valve_relay.setOutput(coolant_valve, false);
+            elseif cmd == "COOLANT_DISABLE" then
+                coolant_valve_relay.setOutput(coolant_valve, true);
             else
                 local reactor_status_str = reactor_status and "ACTIVE" or "INACTIVE"
                 logger:critical("Failed to change state according to command " ..

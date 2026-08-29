@@ -24,18 +24,22 @@ function RelativeHistory:append(data)
     table.insert(self.history, data);
 end
 
-function write_data(data_path, data)
+local function write_data(data_path, data)
     local json = textutils.serializeJSON(data, JSON_OPTS);
     local file = fs.open(data_path, "w+");
     file.write(json);
     file.close();
 end
 
+local function joules_to_fe(joules)
+    return joules * 0.4;
+end
+
 function main()
     local turbine = mk_turbine.Turbine:new();
 
     local data = {};
-    local energy_production_history = RelativeHistory:new('Energy Production', 100);
+    local energy_production_history = RelativeHistory:new('Energy Production', 200);
 
     while true do
         data.steam_filled = turbine.device.getSteamFilledPercentage();
@@ -43,7 +47,7 @@ function main()
         data.flow_rate = turbine.device.getFlowRate();
         data.max_flow_rate = turbine.device.getMaxFlowRate();
 
-        data.energy_production = turbine.device.getEnergyFilledPercentage();
+        data.energy_production = turbine.device.getEnergy();
         data.max_energy_productuion = turbine.device.getMaxProduction();
 
         data.max_water_output = turbine.device.getMaxWaterOutput();
