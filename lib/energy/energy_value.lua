@@ -35,6 +35,10 @@ function EnergyValue:__div(value)
     return EnergyValue:new(self:as_fe() / value:as_fe(), EnergyUnit.FORGE_ENERGY);
 end
 
+function EnergyValue:__tonumber()
+    return self.value;
+end
+
 function EnergyValue:__tostring()
     local scale, unit = self:autoscale();
     return utils.round_float(self.value / scale) .. " " .. unit;
@@ -53,7 +57,7 @@ function EnergyValue:autoscale(unit)
         local value = math.abs(math.floor(self.value / scale));
         local digits = #tostring(value);
 
-        if (value > 0 and digits <= 3 and digits >= 1) then
+        if (value > 0 and digits < 4 and digits >= 1) then
             return scale, symbol .. unit;
         end
     end

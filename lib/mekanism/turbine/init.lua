@@ -1,8 +1,7 @@
-local utils = require("mekanism.utils");
+local energy = require("energy");
 
-local SIUnit = utils.SIUnit;
-local EnergyUnit = utils.EnergyUnit;
-local EnergyValue = utils.EnergyValue;
+local EnergyUnit = energy.EnergyUnit;
+local EnergyValue = energy.EnergyValue;
 
 Turbine = {};
 Turbine.__index = Turbine;
@@ -34,6 +33,16 @@ function Turbine:assert_device()
     end
 end
 
+function Turbine:get_energy_fill()
+    self:assert_device();
+    return EnergyValue:new(self.device.getEnergy(), EnergyUnit.JOULES);
+end
+
+function Turbine:get_energy_max()
+    self:assert_device();
+    return EnergyValue:new(self.device.getMaxEnergy(), EnergyUnit.JOULES);
+end
+
 function Turbine:get_energy_production_rate()
     self:assert_device();
 
@@ -43,15 +52,18 @@ function Turbine:get_energy_production_rate()
     if (self.production_rate.last_time == nil) then
         self.production_rate.last_time = curr_time;
         self.production_rate.last_fill = curr_energy;
+        return 0, EnergyUnit.NONE;
     else
         local time_delta_t = (curr_time - self.production_rate.last_time) * 20;
+        local energy_delta = curr_energy - self.production_rate.last_fill;
+        local energy_delta_fe, energy_delta_unit = energy_delta:as_fe(true);
+        local energy_delta_fe_t = energy_delta_fe / time_delta_t;
 
+        self.production_rate.last_time = curr_time;
+        self.production_rate.last_fill = curr_energy;
 
-        local energy_delta_fe = curr_energy:to_fe() - self.production_rate.last_fill:to_fe();
-        self.production_rate.last_production_rate = energy_delta_fe / time_delta_t;
+        return energy_delta_fe_t, (energy_delta_unit .. "/t");
     end
-
-    return self.production_rate.last_production_rate;
 end
 
 return { Turbine = Turbine };
