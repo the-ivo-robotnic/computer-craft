@@ -1,0 +1,3 @@
+[submodule "lib/fbc"]
+	path = lib/fbc
+	url = git@github.com:Fatboychummy-CC/Libraries.git
