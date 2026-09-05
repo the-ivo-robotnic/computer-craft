@@ -1,18 +1,18 @@
--- Package Path Modification
-package.path = package.path .. ";/usr/lib/?";
-package.path = package.path .. ";/usr/lib/?.lua";
-package.path = package.path .. ";/usr/lib/?/init.lua";
+local add_load_path = require("usr.lib.utils").add_load_path
 
+term.clear();
+term.setCursorPos(1, 1);
+
+add_load_path('usr/lib');
+add_load_path('usr/lib/fbc');
 
 local civil_alarms = require("civil-alarms");
-local logging = require("logging");
+local logging = require("fbc.logging");
 local logger = logging.create_context("Alarm CC");
 
 
 local Alarm = civil_alarms.Alarm;
 
-term.clear();
-term.setCursorPos(1, 1);
 
 local evac_alarm = Alarm:new("left", "top", "redstone_relay_6");
 

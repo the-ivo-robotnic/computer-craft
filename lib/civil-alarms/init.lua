@@ -1,6 +1,6 @@
-local thread = require("thread");
+local thread = require("fbc.thread");
 
-local logging = require("logging");
+local logging = require("fbc.logging");
 local logger = logging.create_context("Civil Alarms");
 logging.set_level(logging.LOG_LEVEL.DEBUG);
 
