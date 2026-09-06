@@ -1,6 +1,8 @@
 #Custom
 **/logs
 *.code-workspace
+**/hanalei
+**/.vscode
 
 # Compiled Lua sources
 luac.out

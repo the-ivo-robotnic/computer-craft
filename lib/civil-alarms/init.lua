@@ -58,19 +58,16 @@ function Alarm:arm()
         end
     end);
 
-    t_horn_thread:pause(true);
-    t_strobe_rs:pause(true);
-
     return t_horn_thread, t_strobe_rs
 end
 
 function Alarm:silence()
-    print("Silencing horn!");
+    logger.debug("Silencing horn!");
     self.horn = false;
 end
 
 function Alarm:disarm()
-    print("Silencing strobe and horn!");
+    logger.debug("Silencing strobe and horn!");
     self.horn = false;
     self.strobe = false;
 end
